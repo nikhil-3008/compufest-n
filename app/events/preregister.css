@@ -1,0 +1,199 @@
+  .events-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .event-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .event-card {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: 270px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    transition: transform 0.3s;
+    overflow: hidden;
+    margin: 35px;
+  
+    img {
+      width: 100%;
+      height: auto;
+    }
+  
+    h3 {
+      margin: 10px 0;
+      font-size: 1.5rem;
+    }
+  
+    p {
+      color: #ffffff;
+    }
+  
+    &:hover {
+      transform: scale(1.05);
+      transition: ease-in-out 0.5s;
+    }
+  }
+  
+  .popup {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 900px; /* Increase the width */
+    height: auto; /* Allow the height to adjust based on content */
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    backdrop-filter: blur(14px);
+    background-color: rgba(255, 255, 255, 0.221);
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    transition: ease-in-out 0.5s;
+  
+  
+  
+    img {
+      width: 500px;
+      height: 300px;
+      height: auto;
+    }
+  
+    h2 {
+      margin-top: 10px;
+      color: #ffffff;
+      font-weight: bold;
+      margin-left: 10px;
+      font-size: 1.2rem;
+      color: yellow;
+    }
+  
+    p {
+      color: #ffffff;
+      margin: 10px;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Style for the Register Now button */
+  .register-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #14bf39;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: 10px;
+  }
+
+  .back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF6969;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-left: 10px;
+  }
+  
+  /* Hover animation for the button */
+  .register-button:hover {
+    background-color: #0056b3; /* Change to a darker shade on hover */
+    transform: scale(1.05); /* Scale the button slightly on hover */
+  }
+  
+  .popup-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .popup-text {
+    padding: 50px; /* Add spacing around the text */
+    text-align: right; /* Align the text to the right */
+    background-color: #fff; /* Add a white background color */
+    border-radius: 5px; /* Add some border radius for a rounded appearance */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1); /* Add a subtle shadow effect */
+  }
+  
+  .discription {
+    color: #ffffff;
+    margin: 20px;
+    font-size: 1.2rem;
+  }
+  
+  /* Style for the close button */
+  .popup-close-button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .popup-close-button img {
+    width: 1px; /* Adjust the size of the back icon */
+    height: 1px;
+  }
+  
+  /* Media queries for responsive design */
+  @media (max-width: 768px) {
+    .event-card {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column; /* Change to column layout for event cards */
+    }
+    .popup-close-button {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  
+    .popup {
+      max-width: 100%;
+      display: flex;
+      flex-direction: column; /* Change to column layout for the popup */
+      align-items: center; /* Center the content horizontally */
+      p {
+        color: #ffffff;
+        margin: 10px;
+        font-size: 0.6rem;
+      }
+    }
+    .popup-content {
+      display: flex;
+      flex-direction: column; /* Change to column layout for popup content */
+      align-items: center; /* Center the content horizontally */
+      text-align: center; /* Center-align the text */
+      background-color: transparent; /* Set background color to transparent */
+      border-radius: 5px; /* Add some border radius for a rounded appearance */
+    }
+    .popup-close-button img {
+      width: 40px; /* Adjust the size of the back icon */
+      height: 40px;
+    }
+  
+    /* Additional mobile styles go here */
+    .discription {
+      color: #ffffff;
+      margin: 10px; /* Reduce margin for smaller screens */
+      font-size: 0.5rem; /* Adjust font size for smaller screens */
+    }
+  }
